@@ -1,5 +1,4 @@
-<li class="bold"><a href="" class="waves-effect waves-teal"><i class="small material-icons">insert_chart</i> Home</a></li>
-<li class="bold"><a href="" class="waves-effect waves-teal"><i class="small material-icons">settings</i> Campaigns</a></li>
-<li class="bold"><a href="" class="waves-effect waves-teal"><i class="small material-icons">chat_bubble</i> Account Settings</a></li>
-<li class="bold"><a href="" class="waves-effect waves-teal"><i class="small material-icons">email</i> Unsubscribers</a></li>
-
+<li class="bold"><%= link_to "<i class='small material-icons'>insert_chart</i> Home".html_safe, root_path, class: 'wave-effect waves-teal' %></li>
+<li class="bold"><%= link_to "<i class='small material-icons'>my_location</i> Campaigns".html_safe, campaigns_path, class: 'wave-effect waves-teal' %></li>
+<li class="bold"><%= link_to "<i class='small material-icons'>settings</i> Account Settings".html_safe, settings_path, class: 'wave-effect waves-teal' %></li>
+<li class="bold"><%= link_to "<i class='small material-icons'>email</i> Unsubscribers".html_safe, settings_path, class: 'wave-effect waves-teal' %></li>
