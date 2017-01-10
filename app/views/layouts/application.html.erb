@@ -8,28 +8,29 @@
   </head>
   <body>
     <nav>
-      <ul id="dropdown1" class="dropdown-content">
-        <li><a href="#!">EyeBom Design & Solutions</a></li>
-        <li><a href="#!">EyeClo</a></li>
-      </ul>
-      <div class="nav-wrapper"> <a href="#" class="brand-logo center">Logo</a> <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+     <div class="nav-wrapper"> <a href="#" class="brand-logo center">Logo</a> <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul id="mobile-demo" class="side-nav">
           <li class="no-padding">
             <ul class="collapsible collapsible-accordion">
-              <li class="bold"><a href="" class="waves-effect waves-teal"><i class="small material-icons">insert_chart</i> Home</a></li>
-              <li class="bold"><a href="" class="waves-effect waves-teal"><i class="small material-icons">settings</i> Campaigns</a></li>
-              <li class="bold"><a href="" class="waves-effect waves-teal"><i class="small material-icons">chat_bubble</i> Account Settings</a></li>
-              <li class="bold"><a href="" class="waves-effect waves-teal"><i class="small material-icons">email</i> Unsubscribers</a></li>
+              <%= render partial: 'layouts/navbar_options' %>
             </ul>
           </li>
         </ul>
       </div>
     </nav>
-    <%= yield %>
+    <div class="row">
+      <div class="col s0 m0 l4">
+        <ul id="slide-out" class="side-nav fixed hide-on-med-and-down">
+          <%= render partial: 'layouts/navbar_options' %>
+        </ul>
+      </div>
+      <div class="col s12 m8 l8">
+        <%= yield %>
+      </div>
   </body>
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
   <script>
-      $(".button-collapse").sideNav();
+    $(".button-collapse").sideNav();
   </script>
 </html>
