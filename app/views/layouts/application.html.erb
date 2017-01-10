@@ -6,9 +6,9 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-  <body>
+  <body bgcolor="#E2E2E2">
     <nav>
-     <div class="nav-wrapper"> <a href="#" class="brand-logo center">Logo</a> <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <div class="nav-wrapper blue darken-2"><a href="#" class="brand-logo center"><i class="large material-icons">shopping_cart</i></a> <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul id="mobile-demo" class="side-nav">
           <li class="no-padding">
             <ul class="collapsible collapsible-accordion">
@@ -24,13 +24,12 @@
           <%= render partial: 'layouts/navbar_options' %>
         </ul>
       </div>
-      <div class="col s12 m8 l8">
+      <div class="col s12 m12 l8">
         <%= yield %>
       </div>
   </body>
   <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
   <script>
-    $(".button-collapse").sideNav();
+$(".button-collapse").sideNav();
   </script>
 </html>
