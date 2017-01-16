@@ -10,12 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170115202408) do
+ActiveRecord::Schema.define(version: 20170116003129) do
 
   create_table "campaigns", force: :cascade do |t|
     t.string  "name"
     t.integer "shop_id"
     t.index ["shop_id"], name: "index_campaigns_on_shop_id"
+  end
+
+  create_table "email_messages", force: :cascade do |t|
+    t.date     "date_to_send"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "campaign_id"
+    t.index ["campaign_id"], name: "index_email_messages_on_campaign_id"
   end
 
   create_table "shops", force: :cascade do |t|
