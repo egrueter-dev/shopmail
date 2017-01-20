@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+  resources :campaigns do
+    resources :email_messages
+  end
 
   resources :settings, only: [:index]
-  resources :campaigns
   resources :account_settings, only: [:index]
   resources :unsubscribers, only: [:index]
 

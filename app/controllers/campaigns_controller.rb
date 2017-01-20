@@ -3,8 +3,16 @@ class CampaignsController < ApplicationController
 
   def index
     campaigns = Campaign.where(shop_id: session[:shopify])
-    redirect_to new_campaign_path if campaigns.empty?
-    @campaign = campaigns.first
+    if campaigns.empty?
+      redirect_to new_campaign_path if campaigns.empty?
+    else
+      campaign = campaigns.first
+      redirect_to campaign
+    end
+  end
+
+  def show
+    @campaign = Campaign.find(params[:id])
   end
 
   def edit; end
@@ -25,7 +33,7 @@ class CampaignsController < ApplicationController
       shop_id: session[:shopify]
     )
     campaign.save
-    redirect_to campaigns_path
+    redirect_to campaign
   end
 
   private
