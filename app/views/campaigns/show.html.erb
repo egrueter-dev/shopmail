@@ -8,6 +8,11 @@
   <div class="card-panel">
     <div class="campaign-header">
       <h4>New Email Message</h4>
+      <%= button_to 'New Email Message', new_campaign_email_message_path(campaign_id: @campaign), method: :get, class: 'waves-effect waves-light btn-large blue darken-2' %>
     </div>
   </div>
 </div>
+
+<%= render @email_messages %>
+
+Display email messages here with the partial....

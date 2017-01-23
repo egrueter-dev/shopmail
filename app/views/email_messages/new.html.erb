@@ -1,6 +1,6 @@
 <div class="row card-panel">
   <h5> Create an Email Message </h5>
-  <%= form_for @email_message, class: 'col s12', method: :post do |f| %>
+  <%= form_for [@campaign, @email_message], class: 'col s12' do |f| %>
     <div class="row">
       <div class="input-field col s12">
         <%= f.label 'Email name' %>

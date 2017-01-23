@@ -1,3 +1,16 @@
 // Place all the styles related to the Settings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// panel heading styles
+
+.panel-heading {
+  border-bottom: 1px solid black;
+
+  h1 {
+    font-size: 3.2rem;
+    line-height: 110%;
+    margin: 2.1rem 0 1.68rem 0;
+  }
+}

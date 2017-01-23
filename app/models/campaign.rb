@@ -1,4 +1,4 @@
 class Campaign < ActiveRecord::Base
   belongs_to :shop
-  # add validations for data fields
+  has_many :email_messages
 end

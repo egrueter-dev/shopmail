@@ -1,16 +1,13 @@
 class SettingsController < ApplicationController
-  before_action :fetch_shop, only: [:show, :update]
+  before_action :fetch_shop, only: [:show, :update, :edit]
 
-  def show
-    @shop
-    # Find the shop
-    # Display it's data
-    # Make editable
-  end
+  def show; end
 
   def update
     # update the shop
   end
+
+  def edit; end
 
   private
 

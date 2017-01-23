@@ -1,5 +1,4 @@
-class EmailMessage
+class EmailMessage < ActiveRecord::Base
   belongs_to :campaign
-  attr_accessor :name, :campaign_id, :date_to_send
-  validates :name, presence: true
+  validates :campaign_id, presence: true
 end

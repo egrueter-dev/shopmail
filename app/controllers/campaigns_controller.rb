@@ -13,6 +13,7 @@ class CampaignsController < ApplicationController
 
   def show
     @campaign = Campaign.find(params[:id])
+    @email_messages = @campaign.email_messages
   end
 
   def edit; end
